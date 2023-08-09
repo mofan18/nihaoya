@@ -25,7 +25,9 @@ class GZHU(object):
         self.url = {
             'scancode': 'http://libbooking.gzhu.edu.cn/scancode.html#/login?sta=1&sysid=1EW&lab=69&type=1',
             'user_info': 'http://libbooking.gzhu.edu.cn/ic-web/auth/userInfo',
-            '101': 'http://libbooking.gzhu.edu.cn/ic-web/reserve?roomIds=100647013&resvDates=20220416&sysKind=8'
+            '101': 'http://libbooking.gzhu.edu.cn/ic-web/reserve?roomIds=100647013&resvDates=20220416&sysKind=8',
+            '202': 'http://libbooking.gzhu.edu.cn/ic-web/reserve?roomIds=100586595&resvDates=20220416&sysKind=8',
+            '3C':'http://libbooking.gzhu.edu.cn/ic-web/reserve?roomIds=100586639&resvDates=20230808&sysKind=8'
         }
 
     def loginLib(self, select_room):
@@ -35,7 +37,7 @@ class GZHU(object):
         """
         self.client.headers.update({
             'Referer': 'http://libbooking.gzhu.edu.cn/',
-            'Host': 'libbooking.gzhuedu.cn'
+            'Host': 'libbooking.gzhu.edu.cn'
         })
 
         # 获得publicKey
